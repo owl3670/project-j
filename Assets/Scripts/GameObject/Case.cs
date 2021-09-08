@@ -5,13 +5,21 @@ using UnityEngine;
 
 public class Case
 {
-    public DateTime OccuredDateTime{get; set;}
+    public Case()
+    {
+        this.OccuredDateTime = DateTime.Now;
+        this.TargetFinishedDateTime = DateTime.Now.AddMinutes(5);
+        this.Description = "Test 사건입니다";
+        this.Defendant = new Defendant();
+    }
 
-    public DateTime FinishedDateTime{get; set;}
+    public DateTime OccuredDateTime { get; set; }
 
-    public DateTime TargetFinishedDateTime{get; set;}
+    public DateTime FinishedDateTime { get; set; }
 
-    public string Description{get; set;}
+    public DateTime TargetFinishedDateTime { get; set; }
 
-    public Defendant Defendant{get; set;}
+    public string Description { get; set; }
+
+    public Defendant Defendant { get; set; }
 }
