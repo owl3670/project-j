@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class GameEventManager
 {
+    public GameEventManager(GameDataManager gameDataManager)
+    {
+        this.GameDataManager = gameDataManager;
+    }
+
+    private GameDataManager GameDataManager { get; }
+
+    public void GenerateEvent()
+    {
+        if (this.GameDataManager.CurrentCaseCount < 5)
+        {
+            Case newCase = this.CreateNewCase();
+            this.GameDataManager.AddCase(newCase);
+            Debug.Log("Case Created and Added");
+        }
+    }
+
     public Case CreateNewCase()
     {
         int randNum = Random.Range(0, 2);

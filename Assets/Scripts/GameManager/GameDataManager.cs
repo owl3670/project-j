@@ -17,4 +17,14 @@ public class GameDataManager
     {
         this.GameData.CurrentCases.Add(newCase);
     }
+
+    public void SaveData()
+    {
+
+    }
+
+    public void LoadData()
+    {
+
+    }
 }

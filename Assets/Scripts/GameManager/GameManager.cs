@@ -14,18 +14,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         this.GameDataManager = new GameDataManager();
-        this.GameEventManager = new GameEventManager();
+        this.GameEventManager = new GameEventManager(this.GameDataManager);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.GameDataManager.CurrentCaseCount < 5)
-        {
-            Case newCase = this.GameEventManager.CreateNewCase();
-            this.GameDataManager.AddCase(newCase);
-            Debug.Log("Case Created and Added");
-        }
+       this.GameEventManager.GenerateEvent();
     }
 
     public void OnCaseButtonClick()
