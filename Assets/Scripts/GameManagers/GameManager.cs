@@ -4,9 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager m_Instance = null;
+    public static GameManager Instance => m_Instance;
+
     public GameDataManager GameDataManager { get; set; }
 
     public GameEventManager GameEventManager { get; set; }
+
+    void Awake()
+    {
+        if (m_Instance == null)
+        {
+            m_Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +34,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       this.GameEventManager.GenerateEvent();
+        this.GameEventManager.GenerateEvent();
     }
 }

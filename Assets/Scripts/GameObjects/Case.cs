@@ -7,11 +7,14 @@ public class Case
 {
     public Case()
     {
+        this.Num = "10010101";
         this.OccuredDateTime = DateTime.Now;
         this.TargetFinishedDateTime = DateTime.Now.AddMinutes(5);
         this.Description = "Test 사건입니다";
         this.Defendant = new Defendant();
     }
+
+    public string Num {get; set;} 
 
     public DateTime OccuredDateTime { get; set; }
 
