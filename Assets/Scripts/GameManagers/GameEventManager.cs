@@ -33,7 +33,10 @@ public class GameEventManager
             //randNum 값이 1일시 형사사건 생성
             case 1:
             default:
-                return new CriminalCase();
+                return new CriminalCase()
+                {
+                    CaseType = CriminalCaseType.Murder
+                };
 
         }
     }

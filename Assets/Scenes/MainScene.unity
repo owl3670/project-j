@@ -594,9 +594,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893862584}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnCaseButtonClick
+      - m_Target: {fileID: 1535820688}
+        m_TargetAssemblyTypeName: UICase, Assembly-CSharp
+        m_MethodName: OpenCaseUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1205,7 +1205,7 @@ PrefabInstance:
     - target: {fileID: 8060945114471844845, guid: 210f9805397e6164a9cd7d4f4dbb07b8,
         type: 3}
       propertyPath: m_Name
-      value: Image
+      value: ImageUICase
       objectReference: {fileID: 0}
     - target: {fileID: 8060945114471844845, guid: 210f9805397e6164a9cd7d4f4dbb07b8,
         type: 3}
@@ -1226,6 +1226,19 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1535820685}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535820688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535820686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b377ca4295e9480594e71a2ef65f6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIInstance: {fileID: 1535820686}
 --- !u!1 &1642171531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c4330034918dc44960d9c61aed8b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CaseUI: {fileID: 1535820686}
 --- !u!4 &1893862585
 Transform:
   m_ObjectHideFlags: 0
@@ -1536,9 +1548,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893862584}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnCaseButtonExitClick
+      - m_Target: {fileID: 1535820688}
+        m_TargetAssemblyTypeName: UICase, Assembly-CSharp
+        m_MethodName: CloseCaseUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject CaseUI;
-
     public GameDataManager GameDataManager { get; set; }
 
     public GameEventManager GameEventManager { get; set; }
@@ -21,17 +19,5 @@ public class GameManager : MonoBehaviour
     void Update()
     {
        this.GameEventManager.GenerateEvent();
-    }
-
-    public void OnCaseButtonClick()
-    {
-        this.CaseUI.SetActive(true);
-        Debug.Log("Turn On");
-    }
-
-    public void OnCaseButtonExitClick()
-    {
-        this.CaseUI.SetActive(false);
-        Debug.Log("Turn Off");
     }
 }
