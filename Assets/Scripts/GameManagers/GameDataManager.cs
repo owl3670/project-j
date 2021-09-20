@@ -42,7 +42,7 @@ public class GameDataManager
         {
             ArticleNum = 1,
             SectionNum = 1,
-            CaseType = CriminalCaseType.Murder,
+            CaseType = CriminalCaseCategory.Murder,
             MinSentenceYear = 2,
             MaxSentenceYear = 5
         });
@@ -50,7 +50,7 @@ public class GameDataManager
         {
             ArticleNum = 1,
             SectionNum = 2,
-            CaseType = CriminalCaseType.Murder,
+            CaseType = CriminalCaseCategory.Murder,
             MinSentenceYear = 2,
             MaxSentenceYear = 5
         });
@@ -59,7 +59,7 @@ public class GameDataManager
         {
             ArticleNum = 2,
             SectionNum = 1,
-            CaseType = CriminalCaseType.Thieves,
+            CaseType = CriminalCaseCategory.Thieves,
             MinSentenceYear = 2,
             MaxSentenceYear = 5
         });
@@ -67,7 +67,7 @@ public class GameDataManager
         {
             ArticleNum = 2,
             SectionNum = 2,
-            CaseType = CriminalCaseType.Thieves,
+            CaseType = CriminalCaseCategory.Thieves,
             MinSentenceYear = 2,
             MaxSentenceYear = 5
         });
@@ -75,7 +75,7 @@ public class GameDataManager
         {
             ArticleNum = 2,
             SectionNum = 3,
-            CaseType = CriminalCaseType.Thieves,
+            CaseType = CriminalCaseCategory.Thieves,
             MinSentenceYear = 2,
             MaxSentenceYear = 5
         });

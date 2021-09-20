@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,13 +21,13 @@ public enum JudgeRank
     LEVEL15 = 15,
 }
 
-public enum CriminalCaseType
+public enum CriminalCaseCategory
 {
     Murder,
     Thieves,
 }
 
-public enum CivilCaseType
+public enum CivilCaseCategory
 {
     Temp,
 }

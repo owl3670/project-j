@@ -35,7 +35,7 @@ public class GameEventManager
             default:
                 return new CriminalCase()
                 {
-                    CaseType = CriminalCaseType.Murder
+                    Category = CriminalCaseCategory.Murder
                 };
 
         }
