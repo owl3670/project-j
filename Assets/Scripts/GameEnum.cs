@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,11 +14,6 @@ public enum JudgeRank
     LEVEL8 = 8,
     LEVEL9 = 9,
     LEVEL10 = 10,
-    LEVEL11 = 11,
-    LEVEL12 = 12,
-    LEVEL13 = 13,
-    LEVEL14 = 14,
-    LEVEL15 = 15,
 }
 
 public enum CaseType
