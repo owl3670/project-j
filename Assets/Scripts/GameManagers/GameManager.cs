@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private static GameManager m_Instance = null;
     public static GameManager Instance => m_Instance;
 
+    public UICase UICase;
+
     public GameDataManager GameDataManager { get; set; }
 
     public GameEventManager GameEventManager { get; set; }
@@ -27,8 +29,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GameDataManager = new GameDataManager();
-        this.GameEventManager = new GameEventManager(this.GameDataManager);
+        this.GameDataManager = new GameDataManager(this);
+        this.GameEventManager = new GameEventManager(this);
     }
 
     // Update is called once per frame

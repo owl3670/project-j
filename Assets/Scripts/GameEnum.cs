@@ -21,6 +21,12 @@ public enum JudgeRank
     LEVEL15 = 15,
 }
 
+public enum CaseType
+{
+    Criminal,
+    Civil,
+}
+
 public enum CriminalCaseCategory
 {
     Murder,

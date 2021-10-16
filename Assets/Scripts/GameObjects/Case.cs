@@ -3,18 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Case
+public abstract class Case
 {
     public Case()
     {
-        this.Num = "10010101";
         this.OccuredDateTime = DateTime.Now;
         this.TargetFinishedDateTime = DateTime.Now.AddMinutes(5);
-        this.Description = "Test 사건입니다";
-        this.Defendant = new Defendant();
+        this.Defendant = new Character();
     }
 
-    public string Num {get; set;} 
+    public string Num { get; set; }
 
     public DateTime OccuredDateTime { get; set; }
 
@@ -24,5 +22,5 @@ public class Case
 
     public string Description { get; set; }
 
-    public Defendant Defendant { get; set; }
+    public Character Defendant { get; set; }
 }
