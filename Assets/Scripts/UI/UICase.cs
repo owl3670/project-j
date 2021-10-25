@@ -7,7 +7,6 @@ public class UICase : MonoBehaviour
     public GameObject UIInstance;
     public GameObject CaseItemList;
     public ToggleGroup ToggleGroup;
-
     public UICivilCaseDescription UICivilCaseDescription;
     public UICriminalCaseDescription UICriminalCaseDescription;
 

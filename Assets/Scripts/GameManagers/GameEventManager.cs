@@ -25,8 +25,6 @@ public class GameEventManager
             notDefendantRandNum = Random.Range(0, characters.Count);
         } while (notDefendantRandNum == defendantRandNum);
 
-
-
         int caseRandNum = Random.Range(0, 2);
         switch (caseRandNum)
         {
@@ -41,7 +39,6 @@ public class GameEventManager
             //caseRandNum 값이 1일시 형사사건 생성
             case 1:
             default:
-
                 return new CriminalCase()
                 {
                     Num = caseNum,
@@ -58,7 +55,7 @@ public class GameEventManager
         if (this.GameManager.GameDataManager.CurrentCaseCount < 5)
         {
             Case newCase = this.CreateNewCase();
-            this.GameManager.GameDataManager.AddCase(newCase);
+            this.GameManager.GameDataManager.AddCurrentCase(newCase);
             this.GameManager.UICase.AddNewCaseItem(newCase);
         }
     }

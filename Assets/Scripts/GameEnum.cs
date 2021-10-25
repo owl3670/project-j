@@ -32,3 +32,9 @@ public enum CivilCaseCategory
 {
     Temp,
 }
+
+public enum CommutationReasonType
+{
+    Law,
+    Special,
+}

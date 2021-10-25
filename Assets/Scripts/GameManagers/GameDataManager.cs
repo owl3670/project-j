@@ -21,9 +21,21 @@ public class GameDataManager
 
     public List<Character> Characters { get { return this.GameData.Characters; } }
 
-    public void AddCase(Case newCase)
+    public Player Player { get { return this.GameData.Player; } }
+
+    public void AddCurrentCase(Case newCase)
     {
         this.GameData.CurrentCases.Add(newCase);
+    }
+
+    public void RemoveCurrentCase(Case endCase)
+    {
+        this.GameData.CurrentCases.Remove(endCase);
+    }
+
+    public void AddEndCase(Case endCase, Sentence sentece)
+    {
+        this.GameData.EndCases.Add((endCase, sentece));
     }
 
     public void SaveData()
@@ -37,7 +49,6 @@ public class GameDataManager
         //추후 load 할 data 가 없을시에만 아래코드 동작하도록 구현 필요
         this.InitData();
     }
-
 
     private void InitData()
     {
