@@ -11,7 +11,7 @@ public class GameEventManager
 
     private GameManager GameManager { get; set; }
 
-    private Case CreateNewCase()
+    private (Case, Sentence) CreateNewCaseAndSentence()
     {
         int randNum = Random.Range(0, 50);
         this.GameManager.GameDataManager.LastGeneratedCaseNum += randNum;
@@ -30,33 +30,35 @@ public class GameEventManager
         {
             //caseRandNum 값이 0일시 민사사건 생성
             case 0:
-                return new CivilCase()
+                return (new CivilCase()
                 {
                     Num = caseNum,
                     Defendant = characters[defendantRandNum],
                     Plaintiff = characters[notDefendantRandNum],
-                };
+                }, new CivilCaseSentence()
+                );
             //caseRandNum 값이 1일시 형사사건 생성
             case 1:
             default:
-                return new CriminalCase()
+                return (new CriminalCase()
                 {
                     Num = caseNum,
                     Category = CriminalCaseCategory.Murder,
                     Defendant = characters[defendantRandNum],
                     Victim = characters[notDefendantRandNum],
-                };
+                }, new CriminalCaseSentence()
+                );
 
         }
     }
 
     public void GenerateEvent()
     {
-        if (this.GameManager.GameDataManager.CurrentCaseCount < 5)
+        if (this.GameManager.GameDataManager.CurrentCaseCount < 10)
         {
-            Case newCase = this.CreateNewCase();
-            this.GameManager.GameDataManager.AddCurrentCase(newCase);
-            this.GameManager.UICase.AddNewCaseItem(newCase);
+            (Case, Sentence) casePair = this.CreateNewCaseAndSentence();
+            this.GameManager.GameDataManager.AddCurrentCase(casePair);
+            this.GameManager.UICase.AddNewCaseItem(casePair.Item1);
         }
     }
 }

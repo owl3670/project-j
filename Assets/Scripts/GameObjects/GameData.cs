@@ -7,7 +7,7 @@ public class GameData
     public GameData()
     {
         this.Judges = new Dictionary<JudgeRank, List<Judge>>();
-        this.CurrentCases = new List<Case>();
+        this.CurrentCases = new Dictionary<string, (Case, Sentence)>();
         this.EndCases = new List<(Case, Sentence)>();
         this.CriminalLaws = new SortedByArticleLawDictionary();
         this.CivilLaws = new SortedByArticleLawDictionary();
@@ -18,7 +18,7 @@ public class GameData
 
     public Dictionary<JudgeRank, List<Judge>> Judges { get; set; }
 
-    public List<Case> CurrentCases { get; set; }
+    public Dictionary<string, (Case, Sentence)> CurrentCases { get; set; }
 
     public List<(Case, Sentence)> EndCases { get; set; }
 

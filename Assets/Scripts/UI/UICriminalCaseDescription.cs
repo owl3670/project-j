@@ -9,14 +9,18 @@ public class UICriminalCaseDescription : MonoBehaviour
     public Text TextCaseDescription;
     public Text TextLawyer;
     public Text TextProsecutor;
+    public UICriminalCaseSentence UICriminalCaseSentence;
 
     public void SetCaseDescription(CriminalCase criminalCase)
     {
-       this.TextCaseNum.text = criminalCase.Num;
-       this.TextDefendant.text = criminalCase.Defendant.FullName;
-       this.TextVictim.text = criminalCase.Victim.FullName;
-       this.TextCaseDescription.text = criminalCase.Description;
-       this.TextLawyer.text = criminalCase.Lawyer.FullName;
-       this.TextProsecutor.text = criminalCase.Prosecutor.FullName;
+        this.TextCaseNum.text = criminalCase.Num;
+        this.TextDefendant.text = criminalCase.Defendant.FullName;
+        this.TextVictim.text = criminalCase.Victim.FullName;
+        this.TextCaseDescription.text = criminalCase.Description;
+        this.TextLawyer.text = criminalCase.Lawyer.FullName;
+        this.TextProsecutor.text = criminalCase.Prosecutor.FullName;
+
+        Sentence sentence = GameManager.Instance.GameDataManager.GetCurrentCase(criminalCase).Sentence;
+        this.UICriminalCaseSentence.SetSentence(sentence as CriminalCaseSentence);
     }
 }

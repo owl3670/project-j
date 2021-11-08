@@ -23,19 +23,24 @@ public class GameDataManager
 
     public Player Player { get { return this.GameData.Player; } }
 
-    public void AddCurrentCase(Case newCase)
+    public void AddCurrentCase((Case, Sentence) casePair)
     {
-        this.GameData.CurrentCases.Add(newCase);
+        this.GameData.CurrentCases.Add(casePair.Item1.Num, casePair);
+    }
+
+    public (Case Case, Sentence Sentence) GetCurrentCase(Case findCase)
+    {
+        return this.GameData.CurrentCases[findCase.Num];
     }
 
     public void RemoveCurrentCase(Case endCase)
     {
-        this.GameData.CurrentCases.Remove(endCase);
+        this.GameData.CurrentCases.Remove(endCase.Num);
     }
 
-    public void AddEndCase(Case endCase, Sentence sentece)
+    public void AddEndCase((Case, Sentence) casePair)
     {
-        this.GameData.EndCases.Add((endCase, sentece));
+        this.GameData.EndCases.Add(casePair);
     }
 
     public void SaveData()
