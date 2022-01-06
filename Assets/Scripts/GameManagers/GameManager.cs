@@ -38,4 +38,21 @@ public class GameManager : MonoBehaviour
     {
         this.GameEventManager.GenerateEvent();
     }
+
+    public void SentenceCase(Case currentCase, Sentence CurrentSentence)
+    {
+        switch (currentCase)
+        {
+            case CriminalCase criminalCase:
+            {
+
+            }
+            break;
+            case CivilCase civilCase:
+            {
+
+            }
+            break;
+        }
+    }
 }
