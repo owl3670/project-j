@@ -39,13 +39,20 @@ public class GameManager : MonoBehaviour
         this.GameEventManager.GenerateEvent();
     }
 
-    public void SentenceCase(Case currentCase, Sentence CurrentSentence)
+    public void SentenceCase(Case currentCase, Sentence currentSentence)
     {
         switch (currentCase)
         {
             case CriminalCase criminalCase:
             {
-
+                CriminalCaseSentence criminalCaseSentence = currentSentence as CriminalCaseSentence;
+                foreach(CriminalLaw law in criminalCaseSentence.ReferenceLaws)
+                {
+                    if (criminalCase.Category != law.CaseCategory)
+                    {
+                        
+                    }
+                }
             }
             break;
             case CivilCase civilCase:

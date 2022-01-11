@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CriminalLaw : Law
 {
-    public CriminalCaseCategory CaseType { get; set; }
+    public CriminalCaseCategory CaseCategory { get; set; }
 
     public int MinSentenceYear { get; set; }
 
