@@ -68,16 +68,22 @@ public class GameDataManager
             ArticleNum = 1,
             SectionNum = 1,
             CaseCategory = CriminalCaseCategory.Murder,
-            MinSentenceYear = 2,
-            MaxSentenceYear = 5
+            MinSentenceYear = 5,
+            MaxSentenceYear = int.MaxValue,
+            IsExcutionable = true,
+            Title = "보통 살인죄",
+            Contents = "사람을 살해한 자는 사형, 무기 또는 5년 이상의 징역에 처한다.",
         });
         this.GameData.CriminalLaws[1].Add(2, new CriminalLaw()
         {
             ArticleNum = 1,
             SectionNum = 2,
             CaseCategory  = CriminalCaseCategory.Murder,
-            MinSentenceYear = 2,
-            MaxSentenceYear = 5
+            MinSentenceYear = 7,
+            MaxSentenceYear = int.MaxValue,
+            Title = "존속 살인죄",
+            Contents = "자기 또는 배우자의 직계존속을 살해한 자는 사형, 무기 또는 7년 이상의 징역에 처한다.",
+ 
         });
         this.GameData.CriminalLaws.Add(2, new SortedBySectionLawDictionay());
         this.GameData.CriminalLaws[2].Add(1, new CriminalLaw()
@@ -85,24 +91,30 @@ public class GameDataManager
             ArticleNum = 2,
             SectionNum = 1,
             CaseCategory = CriminalCaseCategory.Thieves,
-            MinSentenceYear = 2,
-            MaxSentenceYear = 5
+            MinSentenceYear = 0,
+            MaxSentenceYear = 6,
+            Title = "절도죄",
+            Contents = "타인의 재물을 절취한 자는 6년 이하의 징역에 처한다."
         });
         this.GameData.CriminalLaws[2].Add(2, new CriminalLaw()
         {
             ArticleNum = 2,
             SectionNum = 2,
             CaseCategory = CriminalCaseCategory.Thieves,
-            MinSentenceYear = 2,
-            MaxSentenceYear = 5
+            MinSentenceYear = 0,
+            MaxSentenceYear = 10,
+            Title = "야간 주거 침입 절도죄",
+            Contents = "야간에 사람의 주거, 간수하는 저택, 건조물이나 선박 또는 점유하는 방실에 침입하여 타인의 재물을 절취한 자는 10년 이하의 징역에 처한다."
         });
         this.GameData.CriminalLaws[2].Add(3, new CriminalLaw()
         {
             ArticleNum = 2,
             SectionNum = 3,
             CaseCategory = CriminalCaseCategory.Thieves,
-            MinSentenceYear = 2,
-            MaxSentenceYear = 5
+            MinSentenceYear = 1,
+            MaxSentenceYear = 5,
+            Title = "특수 절도죄",
+            Contents = "야간에 문호 또는 장벽 기타 건조물의 일부를 손괴하고 전조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다."
         });
 
         this.GameData.CivilLaws.Add(1, new SortedBySectionLawDictionay());
@@ -113,10 +125,11 @@ public class GameDataManager
         this.GameData.CivilLaws[2].Add(1, new CivilLaw());
         this.GameData.CivilLaws[2].Add(2, new CivilLaw());
 
-        string[] lastNames = { "서", "오", "김", "조", "박" };
-        string[] nameCharacters = { "서", "현", "이", "진", "신", "유", "정", "가" };
+        string[] lastNames = { "서", "오", "김", "조", "박", "정", "이", "지", "신" };
+        string[] nameCharacters = { "서", "현", "이", "진", "신", "유", "정", "가", "준", "재", "민", "호", "성", "태", "형" };
 
-        for (int i = 0; i < 100; i++)
+        // Character 추가
+        for (int i = 0; i < 1000; i++)
         {
             int lastNameRandNum = Random.Range(0, lastNames.Length);
             int nameCharRandNum1 = Random.Range(0, nameCharacters.Length);

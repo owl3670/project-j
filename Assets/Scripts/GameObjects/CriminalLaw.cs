@@ -9,4 +9,6 @@ public class CriminalLaw : Law
     public int MinSentenceYear { get; set; }
 
     public int MaxSentenceYear { get; set; }
+
+    public bool IsExcutionable { get; set; }
 }

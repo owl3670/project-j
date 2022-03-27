@@ -30,13 +30,13 @@ public class GameEventManager
         {
             //caseRandNum 값이 0일시 민사사건 생성
             case 0:
-                return (new CivilCase()
-                {
-                    Num = caseNum,
-                    Defendant = characters[defendantRandNum],
-                    Plaintiff = characters[notDefendantRandNum],
-                }, new CivilCaseSentence()
-                );
+                // return (new CivilCase()
+                // {
+                //     Num = caseNum,
+                //     Defendant = characters[defendantRandNum],
+                //     Plaintiff = characters[notDefendantRandNum],
+                // }, new CivilCaseSentence()
+                // );
             //caseRandNum 값이 1일시 형사사건 생성
             case 1:
             default:

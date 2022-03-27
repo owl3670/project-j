@@ -23,4 +23,10 @@ public abstract class Case
     public string Description { get; set; }
 
     public Character Defendant { get; set; }
+
+    public (int, int) MandatoryLawNum { get; set; }
+
+    public List<(int, int)> AdditionalLawNums { get; set; }
+
+    public List<CommutationReason> PossibleCommutationReasons { get; set; }
 }

@@ -8,5 +8,7 @@ public class Law
 
     public int SectionNum { get; set; }
 
+    public string Title {get; set;}
+
     public string Contents { get; set; }
 }
